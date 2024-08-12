@@ -6,7 +6,7 @@ pipeline {
   stages {
     stage('Checkout') {
       steps {
-        git branch: "${env.BRANCH_NAME}", url: '<https://github.com/pallets/flask.git>'
+        git branch: "${env.BRANCH_NAME}", url: '<https://github.com/nevendimka/flask-lab4.1.git>'
       }
     }
     stage('Setup Python') {
@@ -38,7 +38,7 @@ pipeline {
     }
     stage('Deploy') {
       when {
-        branch 'master'
+        branch 'main'
       }
       environment {
         PYTHON_ENV = 'production'
@@ -47,7 +47,7 @@ pipeline {
         sh './deploy-prod.sh'
       }
     }
-    stage('Deploy') {
+    stage('Deploy_2') {
       when {
         branch 'dev'
       }
