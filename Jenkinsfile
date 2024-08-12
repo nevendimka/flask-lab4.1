@@ -6,7 +6,7 @@ pipeline {
   stages {
     stage('Checkout') {
       steps {
-        git '<https://github.com/nevendimka/flask-lab4.1.git>'
+        git 'https://github.com/nevendimka/flask-lab4.1.git'
       }
     }
     stage('Setup Python') {
