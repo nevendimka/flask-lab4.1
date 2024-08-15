@@ -2,6 +2,7 @@ pipeline {
     agent any
     environment {
         PYTHON_ENV = 'development'
+        BRANCH_NAME = 'main'
     }
   stages {
     stage('Checkout') {
