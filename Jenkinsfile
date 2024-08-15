@@ -12,8 +12,8 @@ pipeline {
     }
     stage('Setup Python') {
       steps {
-        sh 'sudo su'
-        sh 'python3 -m venv venv'
+        //sh 'sudo su'
+        sh 'sudo python3 -m venv venv'
         sh '. venv/bin/activate'
       }
     }
